@@ -1,0 +1,38 @@
+
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+
+# Python virtual environments and cache
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Flutter generated files
+.dart_tool/
+.pub-cache/
+.flutter-plugins
+.flutter-plugins-dependencies
+build/
+
+# Android generated files and local settings
+**/android/.gradle/
+**/android/.kotlin/
+**/android/local.properties
+
+# IDE and temporary files
+.idea/
+.vscode/
+*.iml
+*.log
+*.tmp
+*.bak
+
+# Large ML model files
+*.joblib

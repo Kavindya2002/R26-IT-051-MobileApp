@@ -1,0 +1,35 @@
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+pydantic==2.10.3
+python-dotenv==1.0.1
+supabase==2.10.0
+
+# ML / data
+numpy==1.26.4
+pandas==2.2.3
+scikit-learn==1.6.1
+scipy==1.14.1
+xgboost==2.1.3
+joblib==1.4.2
+
+# MQTT
+paho-mqtt==2.1.0
+
+# Optional dashboard (only needed if you run app/component2/dashboard.py)
+streamlit==1.40.2
+requests==2.32.3
+
+# Camera/vision (used by app/component2/camera_service.py when
+# CAMERA_ENABLED=true, the default). Set CAMERA_ENABLED=false in .env
+# to skip installing/using these on a machine with no GPU/cameras.
+opencv-python-headless==4.10.0.84
+ultralytics==8.3.40
+
+# ---------------------------------------------------------------
+# IMPORTANT: scikit-learn and xgboost versions above MUST match
+# whatever version your .pkl/.joblib files were trained with, or
+# joblib.load() can raise AttributeError on unpickling. If your
+# models were trained with different versions, change these pins
+# to match your training environment exactly, then re-test.
+# ---------------------------------------------------------------
+email-validator==2.2.0
